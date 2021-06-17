@@ -1,0 +1,47 @@
+#wrapper{
+    display:flex;
+    justify-content: space-around;
+
+}
+div{
+    text-align: center;
+}
+#wrapper2{
+
+    display:flex;
+    justify-content: center;
+    flex:wrap;
+}
+.divDrum{
+    min-width:10%
+}
+
+#ridePic{
+    min-width: 10%;
+    
+}
+
+#ridePicHit{
+    display:none;
+}
+
+#tomPic{
+    min-width: 10%;
+    
+
+}
+
+
+#tomPicHit{
+    display:none;
+}
+
+#kickPicHit{
+    display:none;
+}
+#snarePicHit{
+    display:none;
+}
+#hihatPicHit{
+    display:none;
+}
