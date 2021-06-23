@@ -1,48 +1,74 @@
 #wrapper{
     display:flex;
     justify-content: space-around;
-    
-
-}
+    }
 div{
     text-align: center;
 }
 #wrapper2{
 
     display:flex;
-    justify-content: center;
-    flex:wrap;
+    justify-content: space-around;
+    
 }
 .divDrum{
-    min-width:10%
+    width:20%;
+    flex:1
+    
+}
+#kickdiv{
+    flex:2;
 }
 
 #ridePic{
-    min-width: 10%;
-    
+        width: 100%;
+        animation-duration: 1s; 
 }
 
 #ridePicHit{
+    width: 100%;
     display:none;
+    animation-duration: 1s;
 }
 
+
+
 #tomPic{
-    min-width: 10%;
+        width: 100%;
     
 
 }
 
 
 #tomPicHit{
+    width: 100%;
     display:none;
 }
 
+#kickPic{
+        width: 100%;
+
+}
+
 #kickPicHit{
+    width: 100%;
     display:none;
 }
+
+#snarePic{
+    width: 100%;
+}
+
 #snarePicHit{
+    width: 100%;
     display:none;
+}
+
+#hihatPic{
+    width: 100%;
+
 }
 #hihatPicHit{
+    width: 100%;
     display:none;
 }
