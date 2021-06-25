@@ -1,12 +1,21 @@
 const SoundList = [boom,clap,hihat,kick,openhat,ride,snare,tink,tom];
 
 const playsound = (sound) => {
-   
     let element = document.getElementById(sound)
     element.pause();
     element.currentTime = 0;
     element.play();  
-       };
+       }; 
+       
+       
+       
+ 
+       const ridePic = document.getElementById("ridePic"); 
+ 
+
+
+
+
 
 const liveMusic = {
     ride: [
@@ -27,23 +36,6 @@ const liveMusic = {
         "hihatPicHit"]          
     };
 
-// console.log(liveMusic.ride[0])
-
-
-// for (let i=0 ; i < array.length ; i++){
-// let array =[rideTimeout,tomTimeout,kickTimeout,snareTimeout,hihatTimeout];
-// let array[i] =
-// }
-
-
-
-// const timeOut=(instrument)=>{setTimeout(()=>{
-//     document.getElementById(liveMusic[instrument][1]).style.display ="none";
-//     document.getElementById(liveMusic[instrument][0]).style.display ="block"; }      
-//     ,1000);}
-
-
-
 
 const animation = async function (instrument,i) {
     clearTimeout(i)
@@ -59,14 +51,15 @@ const animation = async function (instrument,i) {
         ,500);
 }
 
-const ridePic = document.getElementById("ridePic");
+
 const ridePicHit = document.getElementById("ridePicHit");
 
 
 
-
-document.addEventListener('keypress', (event) =>{
+document.addEventListener("keypress", (event) =>{
         let letter = event.key;
+        console.log(event);
+        let target = event.target
         console.log(letter);
         if(letter == "a"){
             console.log("A");
@@ -90,7 +83,7 @@ document.addEventListener('keypress', (event) =>{
             console.log("G");
             playsound("openhat");
         }
-        else if(letter == "h"){
+        else if(letter == "h"||target == ridePic){
             console.log("H")
             playsound("ride");
             animation("ride",3)
@@ -111,3 +104,31 @@ document.addEventListener('keypress', (event) =>{
         }
 
 });
+
+
+document.addEventListener("click",(event)=>{
+
+    if(event.target == ridePic||event.target == ridePicHit){
+        console.log("H")
+        playsound("ride");
+        animation("ride",3)
+    }else if(event.target == tomPic||event.target == tomPicHit){
+        console.log("H")
+        playsound("tom");
+        animation("tom",3)
+    }else if(event.target == kickPic||event.target == kickPicHit){
+        console.log("H")
+        playsound("kick");
+        animation("kick",3)
+    }else if(event.target == snarePic||event.target == snarePicHit){
+        console.log("H")
+        playsound("snare");
+        animation("snare",3)
+    }else if(event.target == kickPic||event.target == kickPicHit){
+        console.log("H")
+        playsound("hihat");
+        animation("hihat",3)
+    }
+
+
+})
