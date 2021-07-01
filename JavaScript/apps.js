@@ -124,7 +124,7 @@ document.addEventListener("click",(event)=>{
         console.log("H")
         playsound("snare");
         animation("snare",3)
-    }else if(event.target == kickPic||event.target == kickPicHit){
+    }else if(event.target == hihatPic||event.target == hihatPicHit){
         console.log("H")
         playsound("hihat");
         animation("hihat",3)
